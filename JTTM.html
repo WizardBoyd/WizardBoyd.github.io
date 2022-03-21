@@ -5,115 +5,172 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Journey-Through-The-Mountain</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+<head>
+	<title>Journey-Through-The-Mountain</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body class="is-preload">
+	<div id="page-wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<div class="logo container">
-					<div>
-						<h1><a href="index.html" id="logo">Journey-Through-The-Mountain</a></h1>
-						<p>A 2D Monogame Project</p>
-					</div>
+		<!-- Header -->
+		<header id="header">
+			<div class="logo container">
+				<div>
+					<h1><a href="index.html" id="logo">Journey-Through-The-Mountain</a></h1>
+					<p>A 2D Monogame Project</p>
 				</div>
-			</header>
+			</div>
+		</header>
 
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-				</ul>
-			</nav>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li class="current"><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
 
-			<!-- Main -->
-			<section id="main">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="content">
+		<!-- Main -->
+		<section id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="content">
 
-								<!-- Content -->
+							<!-- Content -->
 
-								<article class="box page-content">
+							<article class="box page-content">
 
-									<header>
-										<h2>Annihilation Game Trailer</h2>
+								<header>
+									<img src="images/JTTM.png" alt="Journey-Through-The-Mountain Artwork" width="100%" height="50%" />
+									<h2>journey-Through-The-Mountain</h2>
 
-									</header>
+								</header>
 
-									<section>
-										<video width ="100%" height="20%" autoplay muted loop><source src="Video/JTTM.mp4" type="video/mp4"</video>
-										<p>
-											This Trailer was made inside Cineam4D by myself as a way to market the game <br /><br />
-											The Trailer made use of X Particles plugin in Cineam4D. you may notice that there are a lot of people in order to cut down on rendertime I used GPU instancing
+								<section>
 
-										</p>
-									</section>
+									<iframe width="100%" height="550" src="https://www.youtube.com/embed/rz0Sq9HBsIo?controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<h3>Story Behind the Game</h3>
+									<p>
+										This (work in progress) game is a piece for my one of my module's at Stafforshire University, it started off by me watching Twitch streamer's playing games like Jump King and myself actually liking that game. So I decided to make something simular.
+										<br />
+										However I wanted to try something different from what i had already worked with (aka Unity) so I decided to use a framework instead in this case it was the monogame framework.
 
-									<section>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/fTVp61b9HnA?controls=0&loop=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										<h3>More intriguing information</h3>
-										<p>
-											The Shader was written by me in HLSL it was developed because as part of the game we wanted it to look like a borderland's art style<br /><br />
-											The Enemy and the player used Inverse Kinematics when aiming this was to try and make it look more realistic the enemy's IK was a bit hard to develop and took a lot of time
-											since I had no concept on what IK was at the time.   <br /><br />
-											The Airships flying in the sky was implemented with unity's particle system with GPU instancing turned on.
+									</p>
+								</section>
 
-										</p>
-									</section>
+								<section>
+									<h3>Current-Progress</h3>
+									<p>
+										In terms of current progress things that have been completed include
+										<ul>
+											<li>Level Editor</li>
+											<li>Animation</li>
+											<li>Camera</li>
+										</ul>
+										<br /><br />
+										items that still need to be complete
+									</p>
 
+									<div class="container">
+										<h1>Dashboard</h1>
 
-								</article>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row gtr-200">
-						<div class="col-12">
-
-							<!-- About -->
-							<section>
-								<h2 class="major"><span>Contact Me</span></h2>
-								<p>
-									Feel free to message me at this email: <strong>luisboyd2000@gmail.com</strong>, I try and respond as fast as possible, you can also find me on social media<br>
-									<ul class="special">
-										<li><a href="https://www.youtube.com/channel/UC4PvwbWK45gx8qi3BYHDiUg/featured" class="fab fa-youtube"><span class="label"></span></a></li>
-										<li><a href="https://www.linkedin.com/in/luis-boyd-58ab93222/" class="fab fa-linkedin"><span class="label"></span></a></li>
-										<li><a href="https://www.instagram.com/luis.p.boyd/?hl=en" class="fab fa-instagram"><span class="label"></span></a></li>
+										<form id="boards_form" class="form-horizontal">
+											<div class="form-group">
+												<select class="form-control" id="boards"></select>
+											</div>
+										</form>
+									</div>
 
 
-									</ul>
-								</p>
-							</section>
+
+
+								</section>
+
+
+							</article>
 
 						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row gtr-200">
+					<div class="col-12">
+
+						<!-- About -->
+						<section>
+							<h2 class="major"><span>Contact Me</span></h2>
+							<p>
+								Feel free to message me at this email: <strong>luisboyd2000@gmail.com</strong>, I try and respond as fast as possible, you can also find me on social media<br>
+								<ul class="special">
+									<li><a href="https://www.youtube.com/channel/UC4PvwbWK45gx8qi3BYHDiUg/featured" class="fab fa-youtube"><span class="label"></span></a></li>
+									<li><a href="https://www.linkedin.com/in/luis-boyd-58ab93222/" class="fab fa-linkedin"><span class="label"></span></a></li>
+									<li><a href="https://www.instagram.com/luis.p.boyd/?hl=en" class="fab fa-instagram"><span class="label"></span></a></li>
+
+
+								</ul>
+							</p>
+						</section>
 
 					</div>
-			</footer>
 
-		</div>
+				</div>
+		</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		 //This is where out JS code will go
+
+        var myHeaders = new Headers();
+		myHeaders.append("Authorization", "ApiKey 48891243f2b047d58c75b2a98db6f500");
+		myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("charset", "utf-8")
+
+        var requestOptions = {
+            method: 'GET',
+			headers: myHeaders,
+            redirect: 'follow',
+            mode: 'no-cors'
+        };
+
+		$(document).ready(function () {
+			console.log(document.cookie);
+			console.log(myHeaders);
+			console.log(requestOptions);
+			fetch("https://api.hacknplan.com/v0/projects/161648/boards/432632", requestOptions).
+				then(response => {
+					if (response.ok) {
+						loadedboard(response.result);
+					}
+				}).catch(error => { console.error("There has been a problem: ", error) });
+
+		});
+
+		var loadedboard = function (board) {
+			$.each(boards, function (index, value) {
+				$('#boards')
+					.append($("<option></option>"))
+					.attr("value", value.id).text(value.name);
+			});
+		};
+	</script>
+</body>
 </html>
