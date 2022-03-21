@@ -63,30 +63,7 @@
 
 								<section>
 									<h3>Current-Progress</h3>
-									<p>
-										In terms of current progress things that have been completed include
-										<ul>
-											<li>Level Editor</li>
-											<li>Animation</li>
-											<li>Camera</li>
-										</ul>
-										<br /><br />
-										items that still need to be complete
-									</p>
-
-									<div class="container">
-										<h1>Dashboard</h1>
-
-										<form id="boards_form" class="form-horizontal">
-											<div class="form-group">
-												<select class="form-control" id="boards"></select>
-											</div>
-										</form>
-									</div>
-
-
-
-
+									<iframe src="https://open.codecks.io/jjtm" width="100%" height="600px"></iframe>
 								</section>
 
 
@@ -136,21 +113,23 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		 //This is where out JS code will go
 
         var myHeaders = new Headers();
-		myHeaders.append("Authorization", "ApiKey 48891243f2b047d58c75b2a98db6f500");
+        myHeaders.append("Authorization", "ApiKey 9bd8de82e175479eb2581322ba592136");
         myHeaders.append("Content-Type", "application/json; charset=utf-8");
 
         var requestOptions = {
             method: 'GET',
 			headers: {
-                'Authorization': "ApiKey 48891243f2b047d58c75b2a98db6f500",
-				"Content-Type": "application/json; charset=utf-8",
-				"Host": "api.hacknplan.com"
+                'Authorization': "ApiKey 9bd8de82e175479eb2581322ba592136",
+                "Content-Type": "application/json",
+				"Host": "api.hacknplan.com",
+				"Access-Control-Allow-Origin" : "*"
+				
 			},
-           
+            credentials: "include",
             mode: 'no-cors'
         };
 
@@ -159,10 +138,21 @@
 			
 			console.log(myHeaders);
 			console.log(requestOptions.headers.Authorization);
-			fetch("https://api.hacknplan.com/v0/projects/161648/boards/432632", requestOptions).
+			console.log(fetch("https://api.hacknplan.com/v0/projects/", requestOptions));
+			fetch("https://api.hacknplan.com/v0/projects/", {
+
+				method: "Get",
+				headers: {
+                    'Authorization': "ApiKey 9bd8de82e175479eb2581322ba592136",
+                    "Content-Type": "application/json"
+				},
+				mode: "no-cors"
+
+			}).
 				then(response => {
 					if (!response.ok) {
 						console.log(response);
+						console.log("NHDWSNWDJN");
 					} else {
                         loadedboard(response.result);
                     }
@@ -177,6 +167,6 @@
 					.attr("value", value.id).text(value.name);
 			});
 		};
-	</script>
+	</script>-->
 </body>
 </html>
