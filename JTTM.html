@@ -141,25 +141,31 @@
 
         var myHeaders = new Headers();
 		myHeaders.append("Authorization", "ApiKey 48891243f2b047d58c75b2a98db6f500");
-		myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("charset", "utf-8")
+        myHeaders.append("Content-Type", "application/json; charset=utf-8");
 
         var requestOptions = {
             method: 'GET',
-			headers: myHeaders,
-            redirect: 'follow',
+			headers: {
+                'Authorization': "ApiKey 48891243f2b047d58c75b2a98db6f500",
+				"Content-Type": "application/json; charset=utf-8",
+				"Host": "api.hacknplan.com"
+			},
+           
             mode: 'no-cors'
         };
 
 		$(document).ready(function () {
 			console.log(document.cookie);
+			
 			console.log(myHeaders);
-			console.log(requestOptions);
+			console.log(requestOptions.headers.Authorization);
 			fetch("https://api.hacknplan.com/v0/projects/161648/boards/432632", requestOptions).
 				then(response => {
-					if (response.ok) {
-						loadedboard(response.result);
-					}
+					if (!response.ok) {
+						console.log(response);
+					} else {
+                        loadedboard(response.result);
+                    }
 				}).catch(error => { console.error("There has been a problem: ", error) });
 
 		});
